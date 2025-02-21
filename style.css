@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 20px 20px;
+    height: 85px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .menu li {
+    display: inline-block;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 22px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav .menu a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 50px; /* Reduzindo o tamanho da logo */
+    }
+
+    nav .menu {
+        display: none; /* Inicialmente escondemos o menu */
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav .menu.active {
+        display: flex; /* Quando a classe 'active' for adicionada, o menu será exibido */
+    }
+
+    nav .menu li {
+        margin-bottom: 10px;
+    }
+
+    /* Ícone do menu (hamburger) */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+    }
+}
+
+#imagemcentral {
+    width: 100%; /* Define a largura fixa */
+    overflow: hidden; /* Esconde a parte extra da imagem */
+    height: auto; /* Mantém a proporção original */
+}
+
+.pagina2 {
+  position: relative; /* Permite posicionar o conteúdo sobre a imagem */
+  width: 100%; /* Largura total */
+  height: 400px; /* Altura da seção (ajuste conforme necessário) */
+  background-image: url('imagens/imagem_div_2.png'); /* Imagem de fundo */
+  background-size: cover; /* Cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  display: flex;
+  justify-content: flex-end; /* Alinha o conteúdo à direita */
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center; /* Centraliza o texto */
+}
+
+.conteudo {
+  background-color: rgba(255, 255, 255, 0); /* Fundo semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px; /* Largura máxima do conteúdo */
+  margin-right: 20px;
+}
+
+.pagina2 h1 {
+  color: #333; /* Cor do título */
+  font-size: 28px; /* Tamanho da fonte */
+  margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+.pagina2 p {
+  color: #555; /* Cor do texto */
+  font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Estilo do contêiner principal que envolve todo o conteúdo da página */
+.container {
+    width: 100%; /* Largura de 100% da tela */
+    max-width: 1200px; /* Largura máxima de 1200px */
+    margin: 0 auto; /* Centraliza o container */
+    
+}
+
+/* Estilo da seção de serviços */
+.services {
+    display: flex; /* Layout flexível */
+    flex-direction: column; /* Organiza os itens em coluna */
+
+}
+
+/* Estilo de cada serviço individual */
+.service {
+    background-color: #f9f9f9; /* Cor de fundo cinza claro */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    border-left: 4px solid #007BFF; /* Borda lateral azul */
+}
+
+/* Estilo do título de cada serviço */
+.service h2 {
+    color: #007BFF; /* Cor do texto azul */
+    margin-top: 0; /* Remove a margem superior padrão */
+}
+
+/* Estilo da seção de funcionalidades */
+.funcionalidades {
+    width: 100vw; /* Ocupa 100% da largura da viewport */
+    margin-left: calc(-50vw + 50%); /* Centraliza a div */
+    padding: 18px; /* Espaçamento interno */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilo de cada caixa de funcionalidade */
+.box {
+    background-color: white; /* Cor de fundo branca */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    border-left: 4px solid #007BFF; /* Borda lateral azul */
+    text-align: center; /* Centraliza o conteúdo */
+    flex: 1 1 250px; /* Flex-grow, flex-shrink, flex-basis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo da imagem dentro das caixas */
+.box img {
+    max-width: 100px; /* Largura máxima da imagem */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+}
+
+/* Estilo do título dentro das caixas */
+.box h3 {
+    color: #007BFF; /* Cor do texto azul */
+    margin-top: 0; /* Remove a margem superior padrão */
+}
+
+.titulo h2{
+  margin-top: 10px;
+  text-align: center;
+ color: #007BFF;
+ padding: 20px;
+ font-size: 40px;
+ font-weight: bold;
+
+}
+
+.titulo p{
+text-align: center;
+color: #000000bb;
+font-size: 25px;
+
+}
+
+
+/* Estilo do rodapé */
+.rodape {
+  background-color: #333; /* Cor de fundo escura */
+  color: white; /* Cor do texto */
+  padding: 40px 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+.rodape-container {
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o contêiner */
+  display: flex;
+  justify-content: space-between; /* Distribui as seções */
+  flex-wrap: wrap; /* Quebra para a próxima linha em telas menores */
+  gap: 20px; /* Espaçamento entre as seções */
+}
+
+.rodape-secao {
+  flex: 1 1 250px; /* Flexibilidade das seções */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.rodape-secao h3 {
+  color: #007BFF; /* Cor do título */
+  font-size: 20px; /* Tamanho da fonte */
+  margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+.rodape-secao ul {
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0;
+}
+
+.rodape-secao ul li {
+  margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+.rodape-secao ul li a {
+  color: white; /* Cor do link */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: color 0.3s; /* Transição suave */
+}
+
+.rodape-secao ul li a:hover {
+  color: #007BFF; /* Cor do link ao passar o mouse */
+}
+
+.redes-sociais .fab {
+  margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.rodape-direitos {
+  width: 100%; /* Ocupa toda a largura */
+  margin-top: 30px; /* Espaçamento acima do texto */
+  border-top: 1px solid #555; /* Linha divisória */
+  padding-top: 20px; /* Espaçamento acima do texto */
+  font-size: 14px; /* Tamanho da fonte */
+
+}
+
+
+
+/* INICIO CSS CTA*/
+
+.cta {
+  background-color: #007bffa4;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.formulario-cta {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.campo {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.campo label {
+  display: block;
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.campo textarea {
+  resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.botao-cta {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botao-cta:hover {
+  background-color: #0056b3;
+}
+
+/* inicio das perguntas*/
+.faq {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.pergunta {
+    margin-bottom: 20px;
+}
+
+.pergunta h3 {
+    color: #007BFF;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.pergunta p {
+    color: #555;
+    font-size: 16px;
+}
