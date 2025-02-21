@@ -103,7 +103,7 @@ nav .menu a:hover {
   position: relative; /* Permite posicionar o conteúdo sobre a imagem */
   width: 100%; /* Largura total */
   height: 400px; /* Altura da seção (ajuste conforme necessário) */
-  background-image: url('imagens/imagem_div_2.png'); /* Imagem de fundo */
+  background-image: url('imagem_div_2.png'); /* Imagem de fundo */
   background-size: cover; /* Cobrir toda a área */
   background-position: center; /* Centraliza a imagem */
   display: flex;
